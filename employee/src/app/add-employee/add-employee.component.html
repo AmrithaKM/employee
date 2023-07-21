@@ -1,0 +1,35 @@
+<p style="font-weight: bold; color:Blue">
+    Add Employee Details Screen
+  </p>
+  
+  <div>
+    <ul>
+      <label class="leftColumn"> ID: </label>
+      <!-- <label class="rightColumn">   {{EmployeeData.id}} </label> -->
+      <input class="rightColumn" type="text" [(ngModel)]="id"/>
+    </ul>
+    <ul>
+      <label class="leftColumn">Name</label>
+      <input class="rightColumn" type="text" [(ngModel)]="name"/>
+    </ul>
+    <ul>
+      <label class="leftColumn">Location</label>
+      <select class="rightColumn" [(ngModel)] ="location" >
+        <option *ngFor="let loc of LocList">
+          {{loc}}
+        </option>
+      </select>
+    </ul>
+    <ul>
+      <label class="leftColumn">Mobile</label>
+      <input class="rightColumn" type="number" [(ngModel)]="mobile"/>
+    </ul>
+    <!-- <ul>
+      <label *ngIf="errorMessage.length>0" style="color:red">{{'*'+errorMessage}}</label>
+    </ul> -->
+    <ul>
+      <button (click)="Cancel()" style="font-weight: bold; color:blue" >Cancel</button>
+      <button (click)="addEmployeeDetails()" style="font-weight: bold; color:blue; margin-left:10px;" >Submit</button>
+    </ul>
+  
+  </div>
